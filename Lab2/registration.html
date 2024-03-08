@@ -1,24 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>login</title>
-</head>
-<body>
-</br>
-    <center><img src="Slike/logoIBU.png" style="width:100px; height=25px"></center>
-    <center><h2>International Burch University</h2></center> 
-    </br>
-    <h1 style="margin-left: 430px;">REGISTRATION FORM</h1>
-<form>
-    
-    
-    
-</form>
-    
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Lab2" content="Task1">
+        <title>IBU Registration</title>  
+    </head>
 
+    <style>
+        .container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            row-gap: 5px;
+            column-gap: 10px;
+        }
 
+        .item {
+            text-align: left;
+            align-self: center;
+        }
 
+       
+        #content-container {
+        display: inline-grid;
+        grid-template-columns: auto;
+        text-align: right;
+        
+    }
 
-</body>
+    </style>
+    <body>
+        <center>
+            <img src="logoIBU.png" width="115px" height="30px"><br>
+            <h3>International Burch University</h3>
+        </center>
+        <div style="text-align: center;">
+            <div style="display: inline-block; text-align: left;">
+                <h2>REGISTRATION FORM</h2>
+                <div class="container">
+                    <div class="item">
+                        <label for="firstname">Firstname:</label><br>
+                        <input type="text" placeholder="Enter your firstname:">   
+                    </div>
+                    <div class="item">
+                        <label for="lastname">Lastname:</label><br>
+                        <input type="text" placeholder="Enter your lastname:">   
+                    </div>
+
+                    <label class="item" for="username">Username:</label>
+                    <input class="item" type="text">
+
+                    <label class="item" for="dob">Date of birth:</label>
+                    <input class="item" type="date">
+
+                    <p class="item"></p>
+                    <p class="item"></p>
+
+                    <label class="item" for="placeOfBirth">Place of birth:</label>
+                    <input class="item" type="text">
+
+                    <label class="item" for="gender" style="align-self: center;">Gender:</label>
+                    <fieldset class="item" style="border: 0;" >
+                        <form>
+                            <input type="radio">
+                            <label for="male">Male</label>
+                        </form>
+                        <form>
+                            <input type="radio">
+                            <label for="female">Female</label>
+                        </form>
+                        <form>
+                            <input type="radio">
+                            <label for="other">Other</label>
+                        </form>
+                    </fieldset>
+
+                    <label class="item" for="email">Email:</label>
+                    <input class="item" type="text"> 
+                    
+                    <label class="item" for="phone">Phone:</label>
+                    <input class="item" type="text"> 
+                    
+                    <label class="item" for="haircolor">Hair color:</label>
+                    <input type="color">
+
+                    <label class="item" for="notes" style="grid-column: span 2;">Notes:</label>
+                    <textarea class="item" style="display: block; grid-column: span 2; grid-row: span 4;"></textarea>
+                    
+                    <div class="item">
+                        <input type="checkbox">
+                        <label for="notifications">Receive notifications</label>  
+                    </div>
+                </div><br>
+                    
+                    <a href="login.html"><input type="submit" value="Register" style="float:right;"></a>
+            </div>   
+        </div>
+    </body>
+</html>
