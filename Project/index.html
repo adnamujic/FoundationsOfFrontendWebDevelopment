@@ -1,53 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>ISKON</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISKON - Inicijativa Sokolović Kolonije za opšti napredak</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--Fontovi koje sam koristila u kodu-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <!--Uzglavlje-->
-    <header>
-        <div class="navbar">
-            <div class="logo"><a href="#">ISKON</a></div>
-            <ul class="links">
-                <li><a href="home">Naslovna</a></li>
-                <li><a href="about">O nama</a></li>
-                <li><a href="activities">Aktivnosti</a></li>
-                <li><a href="contact">Kontakt</a></li>
-            </ul>
-            <a href="#" class="action_btn">Pridruži se</a>
-            <div class="toggle_btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-        <ul class="dropdown-menu">
-            <li><a href="home">Naslovna</a></li>
-            <li><a href="about">O nama</a></li>
-            <li><a href="activities">Aktivnosti</a></li>
-            <li><a href="contact">Kontakt</a></li>
-            <li><a href="#" class="action_btn">Pridruži se</a></li>
+
+  <!--Header, uzglavlje-->
+
+  <header class="header section" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="Slike/logo.jpeg" width="130" height="40" alt="Blogy logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#link za drugu stranicu" class="navbar-link hover:underline" data-nav-link>Naslovna</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#link za drugu stranicu" class="navbar-link hover:underline" data-nav-link>Aktivnosti</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#link za drugu stranicu" class="navbar-link hover:underline" data-nav-link>Članstvo</a>
+          </li>
+
         </ul>
-    </header>
-     
-    <!--Java Script, koristi se za otvaranje/zatvaranje toggle bar-a-->
-    <script>
-        const toggleBtn=document.querySelector('.toggle_btn')
-        const toggleBtnIcon=document.querySelector('.toggle_btn i')
-        const dropDownMenu=document.querySelector('.dropdown-menu')
+      </nav>
 
-        toggleBtn.onclick = function(){
-            dropDownMenu.classList.toggle('open')
-        }
-    </script>
-   
+      <div class="wrapper">
 
+        <button class="search-btn" aria-label="search" data-search-toggler>
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
 
+          <span class="span">Pretražite</span>
+        </button>
+
+        <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+          <span class="span one"></span>
+          <span class="span two"></span>
+          <span class="span three"></span>
+        </button>
+
+        <a href="#" class="btn">Pridružite se</a>
+
+      </div>
+
+    </div>
+  </header>
+
+      <!--Naslovna-->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <h1 class="h1 hero-title">
+            <strong class="strong">Inicijativa Sokolović Kolonije za opšti napredak</strong>
+          </h1>
+
+          <div class="wrapper">
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email_address" placeholder="Vaša email adresa" class="email-field">
+
+              <button type="submit" class="btn">Prijava</button>
+            </form>
+
+            <p class="newsletter-text">
+                Pretplatite se na naš newsletter putem e-pošte
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aktivnosti -->
+
+      <section class="section featured" aria-label="featured post">
+        <div class="container">
+
+          <p class="section-subtitle">
+            <strong class="strong">AKTIVNOSTI</strong> - nedavne objave.
+          </p>
+
+          <ul class="has-scrollbar">
+            <li class="scrollbar-item">
+                <div class="blog-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                    <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                      alt="Slika" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Akcija pošumljavanja UG ISKON u spomen na prvog predsjednika Fahrudina Budnju
+                      </a>
+                    </h3>
+  
+                    <p class="card-text">
+                        Danas su članovi i aktivisti Udruženje ISKON u saradnji sa profesorima i učenicima Cetvrta Gimnazija Ilidza, uz logističku podrškuKJP “Sarajevo-šume” doo Sarajevo , organizovali akciju pošumnjavanja u spomen na jednog od osnivača i prvog predsjednika Udruženja rahmetli Fahrudina Budnju.
+                        Posađeno je cca 1500 stabljika, a u akciji je učešće uzelo cca 100 aktivista.
+                    </p>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                  <img src="Slike/DanNezavisnosti.jpeg" width="500" height="600" loading="lazy"
+                    alt="Slika" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list"> </ul>
+                  <h3 class="h4">
+                    <a href="#" class="card-title hover:underline">
+                        Sretan 1. mart, Dan nezavisnosti Bosne i Hercegovine
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Svim građanima Bosne i Hercegovine čestitamo 1. mart, Dan nezavisnosti Bosne i Hercegovine.
+                    Građani Bosne i Hercegovine danas, 1. marta, slave Dan nezavisnosti. Na današnji dan 1992. godine na referendumu je izglasana nezavisnost naše domovine.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                  <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                    alt="Slika" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h4">
+                    <a href="#" class="card-title hover:underline">
+                        Akcija prikupljanja novčane pomoći za naše komšije kojima je u požaru stradala kuća
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    Poštovani sugrađani,
+                    Udruženje “ISKON” pokreće akciju prikupljanja novčane pomoći za naše komšije kojima je u požaru stradala kuća.
+                    Sigurno ste već svi upoznati o tom nemilom događaju.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+                <div class="blog-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                    <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                      alt="Slika" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                          Sretan 25. novembar, Dan državnosti Bosne i Hercegovine
+                      </a>
+                    </h3>
+  
+                    <p class="card-text">
+                      Svim građanima čestitamo 25. novembar, Dan državnosti Bosne i Hercegovine!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              
+              <li class="scrollbar-item">
+                <div class="blog-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                    <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                      alt="Slika" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Održana Skupština UG ISKON, izabrana predsjednica i rukovodstvo udruženja
+                      </a>
+                    </h3>
+  
+                    <p class="card-text">
+                        Održana je još jedna Skupština UG ISKON na kojoj su jednoglasno izabrani predsjednik Skupštine, predsjednica Udruženja, sekretari i članovi senata.
+                        Također, jednoglasnim odlukama usvojene su: Izmjene statuta Udruženja, Izvještaj o finansijskom poslovanju za 2023. godinu, Izvještaj o radu Udruženja za 2023., kao i plan rada i finansijski plan za 2024. godinu.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="scrollbar-item">
+                <div class="blog-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 500; --height: 600;">
+                    <img src="./assets/images/featured-2.jpg" width="500" height="600" loading="lazy"
+                      alt="Slika" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h4">
+                      <a href="#" class="card-title hover:underline">
+                        Predbajramska akcija čišćenja
+                      </a>
+                    </h3>
+  
+                    <p class="card-text">
+                        UG ISKON već tradicionalno održava eko akciju predbajramskog čišćenja naselja.
+                        Zahvaljujemo se svim članovima Udruženja “Iskon” na angažovanju a posebno našim najmlađim članovima.
+                    </p>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </section>
+
+<!--Video-->
+<div class="video-place">
+      <section class="video-section">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/sCilSWMZ6HY" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      </section>
       
 
+  <!-- Footer-->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h3>Kontaktirajte nas</h3>
+            <p>Email: iskon@gmail.com</p>
+            <p>Telefon: +387 33 552 553</p>
+            <p>Adresa: Nihadija 23, Sokolović Kolonija</p>
+        </div>
+        <div class="footer-content">
+          <h3>Zapratite nas</h3>
+          <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+      </div>
+      
+    <div class="copyright">
+        <p>&copy; 2024 ISKON</p>
+    </div>
+  </footer>
 
+  <!--java script-->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
