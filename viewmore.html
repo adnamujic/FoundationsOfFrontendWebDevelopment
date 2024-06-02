@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Touché</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top">Touché</a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about" class="page-scroll">About</a></li>
+        <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
+        <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
+        <li><a href="#team" class="page-scroll">Chefs</a></li>
+        <li><a href="#call-reservation" class="page-scroll">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+</nav>
+
+
+<!-- Accordion Menu -->
+<div class="accordion-menu">
+  <div class="accordion-title">Address</div>
+  <div class="accordion-content">
+    <p>321 California St, San Francisco, CA 12345</p>
+  </div>
+  <div class="accordion-title">Opening Hours</div>
+  <div class="accordion-content">
+    <p>Mon-Thurs: 10:00 AM - 11:00 PM</p>
+    <p>Fri-Sun: 11:00 AM - 02:00 AM</p>
+  </div>
+</div>
+
+
+<style>
+.accordion-menu {
+  margin-top: 70px;
+}
+
+.accordion-title {
+  background-color:#8eb640 ; 
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background-color: #f1f1f1; 
+}
+
+.accordion-content.active {
+  display: block;
+}
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordionTitles = document.querySelectorAll('.accordion-title');
+    accordionTitles.forEach(function(title) {
+      title.addEventListener('click', function() {
+        var content = this.nextElementSibling;
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  });
+  </script>
+
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Contact Form</h2>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="password" id="password" class="form-control" placeholder="Password" required="required" minlength="8">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required="required" minlength="8">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div id="password-strength"></div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+#success {
+    display: block; 
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+      // Uhvatiti klik na dugme
+      $('.btn-custom').click(function(event) {
+          event.preventDefault(); // Prevent default form submission
+  
+          // Prikazati toastr poruku
+          toastr.success('Poruka je uspešno poslata!');
+      });
+  });
+  </script>
+
+
+
+<!--Video-->
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/32T8Oja5Yn4?si=6NnI5fjjJgLPGdux&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<style>
+    .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style> 
+
+<div id="footer">
+    </div>
+  </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
