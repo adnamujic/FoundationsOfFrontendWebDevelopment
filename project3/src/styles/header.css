@@ -1,0 +1,29 @@
+/* styles/header.css */
+
+header {
+    background-color: rosybrown; 
+    padding: 20px 0; 
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px; 
+  }
+  
+  nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
+  }
+  
+  nav ul li a:hover {
+    color: #ffcc00; 
+  }
+  

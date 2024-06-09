@@ -1,0 +1,76 @@
+/* contact.css */
+body {
+  background-color: mistyrose; /* Nova boja pozadine stranice */
+}
+
+.contact-form {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 15px; /* Zaobljeniji rubovi */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Nova boja pozadine */
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #333333; /* Nova boja teksta */
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  color: #333333; /* Nova boja teksta */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: calc(100% - 24px); /* Prilagođeni širini sa paddingom */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc; /* Nova boja granice */
+  border-radius: 8px; /* Zaobljeniji rubovi */
+  background-color: #f8f8f8; /* Nova boja pozadine */
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: rosybrown;
+}
+
+.contact-form .error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.contact-form button[type="submit"] {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: rosybrown; /* Nova boja pozadine */
+  color: #ffffff; /* Nova boja teksta */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: black /* Nova boja pri hoveru */
+}
+
+.success-message {
+  margin-top: 10px;
+  padding: 15px 20px;
+  background-color: #ACE1AF; /* Nova boja pozadine za uspješnu poruku */
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+}

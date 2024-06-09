@@ -1,0 +1,24 @@
+/* Generalni footer stil */
+footer {
+  background-color: rosybrown;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Stil za kontakt sekciju u footer-u */
+.footer-section.contact {
+  padding: 10px; 
+}
+
+/* Stil za naslov u kontakt sekciji */
+.footer-section.contact h2 {
+  font-size: 1.2em; 
+  margin-bottom: 5px; 
+}
+
+/* Stil za tekst u kontakt sekciji */
+.footer-section.contact p {
+  margin-bottom: 5px; 
+  font-size: 1em; 
+}

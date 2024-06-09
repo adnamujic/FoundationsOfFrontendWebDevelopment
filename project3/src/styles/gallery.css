@@ -1,0 +1,30 @@
+/* gallery.css */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery-card {
+  width: 100%;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card img {
+  object-fit: cover;
+}
+
+.gallery-card-content {
+  padding: 20px;
+}
+
+.gallery-card-button {
+  margin-top: 10px;
+}

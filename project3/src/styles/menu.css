@@ -1,0 +1,61 @@
+/* menu.css */
+
+#restaurant-menu {
+  background-color: mistyrose; /* Svetlija nijansa ružičaste */
+  padding: 20px; /* Dodatni razmak oko menija */
+}
+
+.menu-section {
+  margin-bottom: 30px; /* Povećan razmak između sekcija */
+}
+
+.menu-section-title {
+  font-size: 28px; /* Povećana veličina fonta za naslove sekcija */
+  margin-bottom: 10px; /* Dodatni razmak ispod naslova */
+  color: #333; /* Tamnija boja teksta */
+}
+
+.menu-section hr {
+  border-color: #ddd; /* Blaža nijansa boje linije */
+  margin-bottom: 15px; /* Malo manji razmak ispod linije */
+}
+
+.menu-section button {
+  background-color: #d08585; /* Svetlija nijansa crvene boje */
+  color: white;
+  padding: 12px 24px; /* Malo veće pomeranje za dugme */
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px; /* Malo veći razmak ispod dugmeta */
+  border-radius: 5px; /* Zaobljeni uglovi */
+  transition: background-color 0.3s; /* Lagani efekat tranzicije */
+  margin-right: 10px; /* Dodajemo prostor sa desne strane dugmeta */
+}
+
+.menu-section button:last-child {
+  margin-right: 0; /* Uklanjamo prostor sa desne strane poslednjeg dugmeta */
+}
+
+.menu-section button:hover {
+  background-color: #ae7575; /* Tamnija nijansa crvene boje na hover */
+}
+
+/* Stilovi za stavke jelovnika */
+.menu-item {
+  margin-bottom: 30px; /* Povećan razmak između stavki */
+}
+
+.menu-item-name {
+  font-weight: bold;
+  font-size: 20px; /* Nešto manja veličina fonta za naziv stavke */
+  margin-bottom: 5px; /* Manji razmak ispod naziva stavke */
+  color: #444; /* Tamnija boja teksta */
+}
+
+.menu-item-price {
+  color: #888; /* Promenjena boja cene stavke */
+}
+
+.menu-item-description {
+  color: #666; /* Promenjena boja opisa stavke */
+}
